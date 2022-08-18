@@ -11,24 +11,24 @@ import java.util.concurrent.RecursiveTask;
 public class MainActivity extends AppCompatActivity {
 
     public BotaoJogo[] btn = new BotaoJogo[9];
-    public R.id[] btnIDs = {R.id.bt1, R.id.bt2, R.id.bt3, R.id.bt4, R.id.bt5, R.id.bt6, R.id.bt7, R.id.bt8, R.id.bt9};
+    //public R.id[] btnIDs = {R.id.bt1, R.id.bt2, R.id.bt3, R.id.bt4, R.id.bt5, R.id.bt6, R.id.bt7, R.id.bt8, R.id.bt9};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        for (int i = 0; i < 9; i++)
-            btn[i] = findViewById(btnIDs[i]);
-        /*
-        btn_1 = findViewById(R.id.bt1);
-        btn_2 = findViewById(R.id.bt2);
-        btn_3 = findViewById(R.id.bt3);
-        btn_4 = findViewById(R.id.bt4);
-        btn_5 = findViewById(R.id.bt5);
-        btn_6 = findViewById(R.id.bt6);
-        btn_7 = findViewById(R.id.bt7);
-        btn_8 = findViewById(R.id.bt8);
-        btn_9 = findViewById(R.id.bt9);*/
+        /*for (int i = 0; i < 9; i++)
+            btn[i] = findViewById(btnIDs[i]);*/
+
+        btn[0] = findViewById(R.id.bt1);
+        btn[1] = findViewById(R.id.bt2);
+        btn[2] = findViewById(R.id.bt3);
+        btn[3] = findViewById(R.id.bt4);
+        btn[4] = findViewById(R.id.bt5);
+        btn[5] = findViewById(R.id.bt6);
+        btn[6] = findViewById(R.id.bt7);
+        btn[7] = findViewById(R.id.bt8);
+        btn[8] = findViewById(R.id.bt9);
 
 
 
