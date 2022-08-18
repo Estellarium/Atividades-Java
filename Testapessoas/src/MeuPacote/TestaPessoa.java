@@ -4,18 +4,15 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
+import MeuPacote.Funcionarios.Assalariado;
+import MeuPacote.Funcionarios.Comissionado;
+import MeuPacote.Funcionarios.Empregado;
+import MeuPacote.Funcionarios.Horista;
+import MeuPacote.Pagamentos.Menu;
+
 public class TestaPessoa {
 	
 	public static void main(String[] args) {
-		/*Pessoas p = new Pessoas("Maria",1980);
-		p.setNome("Mariana");
-		p.setAnonasc(1970);
-		System.out.printf("nome=%s anonasc=%d\n", p.getNome(), p.getAnonasc());
-		System.out.println(p.toString());
-		
-		Estudante x = new Estudante("Gabriel", 1999, "123456",8,9);
-		x.calculeMedia();
-		System.out.println(x.toString());*/
 		
 		String[] saNomes = {"Alberto","Beatriz","Carla","Daniel","Ezequiel","Fábio","Giovanna","Hector","Iris","Joao", "Katherine", "Lucas", "Maria",
 							"Nathan", "Oswaldo", "Paula", "Quezia", "Rosana", "Sergio", "Tyrone", "Ulisses", "Valeria", "Wagner", "Xenia", "Yvone", "Zelda"};
@@ -25,7 +22,7 @@ public class TestaPessoa {
 		
 		String sEmpregados = "", sOpcao;
 		ArrayList<Empregado> empregados = new ArrayList<Empregado>();
-		char cOpte;
+		char cOpte = 9;
 		boolean menu = true;
 		
 		while (menu == true) {
@@ -37,29 +34,31 @@ public class TestaPessoa {
 					"\n5 - Exibe somente os assalariados" +
 					"\n6 - Exibe somente os horistas" +
 					"\n7 - Exibe somente os comissionados" +
-					"\n8 - Pagar Pendências" +
+					"\n8 - Faturas e Pagamentos" +
 					"\n9 - Sair");
-			cOpte = sOpcao.charAt(0);
+			try {cOpte = sOpcao.charAt(0);} 
+			catch (StringIndexOutOfBoundsException e) 
+			{JOptionPane.showMessageDialog(null, "Insira um valor!");}
 			
 			switch(cOpte) {
 			case '1': Empregado a = new Assalariado	(
-					  /*Nome, Ano de Nascimento*/	saNomes[rd.nextInt(0,iNomesL)], rd.nextInt(1960,2003),
-					  /*Departamento           */	saDepts[rd.nextInt(0,iDeptsL)], 
-					  /*Salário, Desconto      */	rd.nextInt(1100,3000), rd.nextInt(100,200));
+					  /*Nome, Ano de Nascimento*/	saNomes[rd.nextInt(iNomesL)], (rd.nextInt(2003-1960)+1960),
+					  /*Departamento           */	saDepts[rd.nextInt(iDeptsL)], 
+					  /*Salário, Desconto      */	(rd.nextInt(3000-1100)+1100), (rd.nextInt(200-100)+100));
 					  empregados.add(a);
 					  break;
 				
 			case '2': Empregado h = new Horista		(
-					  /*Nome, Ano de Nascimento*/	saNomes[rd.nextInt(0,iNomesL)], rd.nextInt(1960,2003), 
-					  /*Departamento           */	saDepts[rd.nextInt(0,iDeptsL)], 
-					  /*Horas, Salário         */	rd.nextInt(20,40), rd.nextInt(20,80));
+					  /*Nome, Ano de Nascimento*/	saNomes[rd.nextInt(iNomesL)], (rd.nextInt(2003-1960)+1960), 
+					  /*Departamento           */	saDepts[rd.nextInt(iDeptsL)], 
+					  /*Horas, Salário         */	(rd.nextInt(40-20)+20), (rd.nextInt(80-20)+20));
 			  		  empregados.add(h);
 			  		  break;
 				
 			case '3': Empregado c = new Comissionado(//Nome, Ano de Nascimento, Departamento, Bruto de Vendas, Taxa de Comissão, Bônus.
-					  /*Nome, Ano de Nascimento */	saNomes[rd.nextInt(0,iNomesL)], rd.nextInt(1960,2003), 
-					  /*Departamento            */	saDepts[rd.nextInt(0,iDeptsL)], 
-					  /*Bruto de Vendas, Taxa de*/  rd.nextInt(10000,50000), rd.nextFloat(0.01f,0.02f), rd.nextInt(500,1000));
+					  /*Nome, Ano de Nascimento */	saNomes[rd.nextInt(iNomesL)], (rd.nextInt(2003-1960)+1960), 
+					  /*Departamento            */	saDepts[rd.nextInt(iDeptsL)], 
+					  /*Bruto de Vendas, Taxa de*/  (rd.nextInt(50000-10000)+10000), (rd.nextFloat()/50), (rd.nextInt(1000-500)+500));
 					  /*Comissão, Bônus         */			
 			  		  empregados.add(c);
 			  		  break;
