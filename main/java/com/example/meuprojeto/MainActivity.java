@@ -1,37 +1,18 @@
 package com.example.meuprojeto;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
-import java.util.concurrent.RecursiveTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    public BotaoJogo[] btn = new BotaoJogo[9];
-    //public R.id[] btnIDs = {R.id.bt1, R.id.bt2, R.id.bt3, R.id.bt4, R.id.bt5, R.id.bt6, R.id.bt7, R.id.bt8, R.id.bt9};
+    BotaoJogo[] btn = new BotaoJogo[9];
+    int[] btnIDs = {R.id.bt1, R.id.bt2, R.id.bt3, R.id.bt4, R.id.bt5, R.id.bt6, R.id.bt7, R.id.bt8, R.id.bt9};
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        /*for (int i = 0; i < 9; i++)
-            btn[i] = findViewById(btnIDs[i]);*/
+    private void buttonSetup() {
 
-        btn[0] = findViewById(R.id.bt1);
-        btn[1] = findViewById(R.id.bt2);
-        btn[2] = findViewById(R.id.bt3);
-        btn[3] = findViewById(R.id.bt4);
-        btn[4] = findViewById(R.id.bt5);
-        btn[5] = findViewById(R.id.bt6);
-        btn[6] = findViewById(R.id.bt7);
-        btn[7] = findViewById(R.id.bt8);
-        btn[8] = findViewById(R.id.bt9);
-
-
-
+        for (int i = 0; i < btn.length; i++)
+            btn[i] = findViewById(btnIDs[i]);
 
         btn[0].addNeigh(new BotaoJogo[]{btn[1],btn[3],null,null});
         btn[1].addNeigh(new BotaoJogo[]{btn[0],btn[2],btn[4],null});
@@ -43,12 +24,18 @@ public class MainActivity extends AppCompatActivity {
         btn[7].addNeigh(new BotaoJogo[]{btn[4],btn[6],btn[8],null});
         btn[8].addNeigh(new BotaoJogo[]{btn[5],btn[7],null,null});
 
-        for (BotaoJogo botao : btn)
-            botao.setOnClickListener(new View.OnClickListener() {
+        for (BotaoJogo bt : btn)
+            bt.setOnClickListener(new View.OnClickListener() {
                 @Override
-                    public void onClick(View view) {botao.trocaCor(true);}
+                public void onClick(View v) {bt.trocaCor(true);}
             });
+    }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+        buttonSetup();
     }
 }
