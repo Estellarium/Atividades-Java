@@ -18,10 +18,23 @@ public class MainActivity extends AppCompatActivity {
 
     private Bundle btClick(String tipo, float preco, float coef) {
         Bundle pparams = new Bundle();
-        params.putString("tipo", tipo);
-        params.putFloat("preco", preco);
-        params.putFloat("coef", coef);
+        pparams.putString("tipo", tipo);
+        pparams.putFloat("preco", preco);
+        pparams.putFloat("coef", coef);
         return pparams;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case (MY_CHILD_ACTIVITY) : {
+                if (resultCode == Activity.RESULT_OK) {
+                    pedido += data.getStringExtra("Pizza");
+                }
+                break;
+            }
+        }
     }
 
     @Override
@@ -48,18 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE);
             }
         });
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            super.onActivityResult(requestCode, resultCode, data);
-            switch (requestCode) {
-                case (MONTAR_PIZZA) : {
-                    if (resultCode == Activity.RESULT_OK) {
-                        pedido += data.getStringExtra("Pizza");
-                    }
-                    break;
-                }
-            }
-        }
+
 
         btlimpar.setOnClickListener(new View.OnClickListener() {
             @Override
