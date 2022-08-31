@@ -1,167 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E6"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="256dp"
-        android:background="@color/blue"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:theme="@style/Theme.MyBlocoDeNotas.AppBarOverlay">
 
-    <Button
-        android:id="@+id/bt2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="256dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintStart_toEndOf="@+id/bt1"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo_notas" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
-        android:id="@+id/bt3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="96dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/content_main" />
 
-    <Button
-        android:id="@+id/bt4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintBottom_toTopOf="@+id/bt7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt1" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
-    <Button
-        android:id="@+id/bt5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        android:translationX="0dp"
-        android:translationY="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt8"
-        app:layout_constraintStart_toEndOf="@+id/bt4"
-        app:layout_constraintTop_toBottomOf="@+id/bt2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/bt6"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintBottom_toTopOf="@+id/bt9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt3" />
-
-    <Button
-        android:id="@+id/bt7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginBottom="256dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bt8"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="256dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt7" />
-
-    <Button
-        android:id="@+id/bt9"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="256dp"
-        android:clickable="true"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:longClickable="false"
-        android:onClick="trocaCor"
-        android:text="O"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="285dp"
-        android:layout_height="95dp"
-        android:text="Clique nos botões para mudar suas cores. Deixe todos amarelos!"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
