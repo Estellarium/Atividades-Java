@@ -1,0 +1,38 @@
+I/SENSORES: {Sensor name="LSM6DSO Accelerometer", vendor="STMicro", version=15932, type=1, maxRange=78.4532, resolution=0.0023928226, power=0.17, minDelay=5000}
+I/SENSORES: {Sensor name="AK09918 Magnetometer", vendor="akm", version=146953, type=2, maxRange=4912.0503, resolution=0.15, power=1.1, minDelay=10000}
+I/SENSORES: {Sensor name="LSM6DSO Gyroscope", vendor="STMicro", version=15932, type=4, maxRange=17.452517, resolution=6.1084726E-4, power=0.55, minDelay=5000}
+I/SENSORES: {Sensor name="TCS3407 Light Ambient Light Sensor Non-wakeup", vendor="AMS", version=1000, type=5, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=0}
+I/SENSORES: {Sensor name="gravity  Non-wakeup", vendor="qualcomm", version=1, type=9, maxRange=156.99008, resolution=0.01, power=0.515, minDelay=5000}
+I/SENSORES: {Sensor name="linear_acceleration", vendor="qualcomm", version=1, type=10, maxRange=156.99008, resolution=0.01, power=0.515, minDelay=5000}
+I/SENSORES: {Sensor name="Rotation Vector  Non-wakeup", vendor="qualcomm", version=1, type=11, maxRange=1.0, resolution=0.01, power=1.415, minDelay=5000}
+I/SENSORES: {Sensor name="AK09918 Magnetometer-Uncalibrated", vendor="akm", version=146953, type=14, maxRange=4912.0503, resolution=0.15, power=1.1, minDelay=10000}
+I/SENSORES: {Sensor name="Game Rotation Vector  Non-wakeup", vendor="qualcomm", version=1, type=15, maxRange=1.0, resolution=0.01, power=0.515, minDelay=5000}
+I/SENSORES: {Sensor name="LSM6DSO Gyroscope-Uncalibrated", vendor="STMicro", version=15932, type=16, maxRange=17.452517, resolution=6.1084726E-4, power=0.55, minDelay=5000}
+I/SENSORES: {Sensor name="smd  Wakeup", vendor="Samsung", version=1, type=17, maxRange=1.0, resolution=1.0, power=0.001, minDelay=-1}
+I/SENSORES: {Sensor name="step_detector  Non-wakeup", vendor="Samsung", version=1, type=18, maxRange=1.0, resolution=1.0, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="step_counter  Non-wakeup", vendor="Samsung", version=1, type=19, maxRange=4.2949673E9, resolution=1.0, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="Tilt Detector  Wakeup", vendor="Samsung", version=1, type=22, maxRange=1.0, resolution=1.0, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="Pick Up Gesture  Wakeup", vendor="Samsung", version=1, type=25, maxRange=1.0, resolution=1.0, power=0.001, minDelay=-1}
+I/SENSORES: {Sensor name="Screen Orientation Sensor", vendor="Samsung", version=1808, type=27, maxRange=255.0, resolution=1.0, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="motion_detect", vendor="qualcomm", version=1, type=30, maxRange=1.0, resolution=1.0, power=0.025, minDelay=-1}
+I/SENSORES: {Sensor name="LSM6DSO Accelerometer-Uncalibrated", vendor="STMicro", version=15932, type=35, maxRange=78.4532, resolution=0.0023928226, power=0.17, minDelay=5000}
+I/SENSORES: {Sensor name="WideIR ALS", vendor="AMS", version=1000, type=65578, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=50000}
+I/SENSORES: {Sensor name="interrupt_gyro  Non-wakeup", vendor="Samsung", version=1, type=65579, maxRange=1.0, resolution=0.01, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="SensorHub type", vendor="SAMSUNG", version=2, type=65586, maxRange=1.0, resolution=0.0, power=0.001, minDelay=1}
+I/SENSORES: {Sensor name="TCS3407 Light CCT  Non-wakeup", vendor="AMS", version=1000, type=65587, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=50000}
+I/SENSORES: {Sensor name="Wake Up Motion  Wakeup", vendor="Samsung", version=1, type=65590, maxRange=2.0, resolution=1.0, power=0.001, minDelay=-1}
+I/SENSORES: {Sensor name="call_gesture  Wakeup", vendor="Samsung", version=1, type=65594, maxRange=1.0, resolution=0.01, power=0.001, minDelay=0}
+I/SENSORES: {Sensor name="TCS3407 Light Physical Light Sensor Non-wakeup", vendor="AMS", version=1000, type=65598, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=0}
+I/SENSORES: {Sensor name="Sar BackOff Motion  Wakeup", vendor="Samsung", version=1, type=65643, maxRange=1.0, resolution=1.0, power=0.001, minDelay=-1}
+I/SENSORES: {Sensor name="A96T3X6 Grip sensor", vendor="ABOV", version=1025, type=65560, maxRange=5.0, resolution=5.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="Hover Proximity Sensor", vendor="Samsung Electronics", version=3, type=65599, maxRange=1.0, resolution=1.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="Hall IC", vendor="Samsung Electronics", version=1, type=65600, maxRange=1.0, resolution=1.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="Touch Pocket Sensor", vendor="Samsung Electronics", version=1, type=65610, maxRange=11.0, resolution=11.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="Grip Notifier Sensor", vendor="Virtual", version=1, type=65645, maxRange=5.0, resolution=5.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="TCS3407 Rear ALS", vendor="AMS", version=1, type=65577, maxRange=65536.0, resolution=1.0, power=1.0, minDelay=10000}
+I/SENSORES: {Sensor name="Calibrated Lux Sensor", vendor="Samsung", version=1, type=65616, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=0}
+I/SENSORES: {Sensor name="Motion Sensor", vendor="Samsung Electronics", version=1, type=65559, maxRange=200.0, resolution=0.0, power=0.0, minDelay=0}
+I/SENSORES: {Sensor name="Ear Hover Proximity Sensor (ProToS)", vendor="Samsung Electronics.", version=1, type=8, maxRange=5.0, resolution=1.0, power=0.75, minDelay=0}
+I/SENSORES: {Sensor name="Auto Brightness Sensor", vendor="Samsung", version=1, type=65601, maxRange=65535.0, resolution=1.0, power=0.1, minDelay=0}
+I/SENSORES: {Sensor name="Camera Light Sensor", vendor="Samsung", version=1, type=65604, maxRange=60000.0, resolution=1.0, power=0.75, minDelay=200000}
+I/SENSORES: {Sensor name="Orientation Sensor", vendor="Samsung Electronics", version=1, type=3, maxRange=360.0, resolution=0.00390625, power=1.415, minDelay=5000}
